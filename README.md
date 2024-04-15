@@ -55,6 +55,7 @@ Stuck on something? Our community is here to help! Join our [Discord channel](ht
 
 Aragonette is released under the AGPL v3 License.
 
+
 ---
 
 Happy prototyping! With Aragonette, the future of decentralized organizations is in your hands. Let's build something amazing together! 🚀🌈
