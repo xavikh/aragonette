@@ -1,6 +1,7 @@
 import { http, createConfig } from "wagmi";
 import { injected } from "wagmi/connectors";
 import { walletConnect } from "wagmi/connectors";
+import { mainnet } from "wagmi/chains";
 import {
   PUB_APP_DESCRIPTION,
   PUB_APP_NAME,
@@ -20,9 +21,10 @@ const metadata = {
 };
 
 export const config = createConfig({
-  chains: [PUB_CHAIN],
+  chains: [mainnet, PUB_CHAIN],
   ssr: true,
   transports: {
+    [mainnet.id]: http(PUB_WEB3_ENDPOINT, { batch: true }),
     [PUB_CHAIN.id]: http(PUB_WEB3_ENDPOINT, { batch: true }),
   },
   connectors: [
